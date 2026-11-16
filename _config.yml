@@ -1,0 +1,93 @@
+# GitHub Pages Configuration
+# Site Settings
+title: TestRepo
+description: A modern CI/CD pipeline project with comprehensive documentation and GitHub Pages
+author: Salim Saay
+url: https://saaysalim.github.io/TestRepo
+baseurl: /TestRepo
+
+# Theme
+theme: jekyll-theme-minimal
+# Alternative themes: jekyll-theme-cayman, jekyll-theme-slate, jekyll-theme-modernist
+
+# Markdown Processor
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# SASS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Permalink style
+permalink: /:year/:month/:day/:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /docs/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "page"
+
+# Build settings
+source: .
+destination: _site
+incremental: false
+safe: false
+
+# Exclude from build
+exclude:
+  - node_modules
+  - dist
+  - .git
+  - .gitignore
+  - .env
+  - .env.local
+  - package.json
+  - package-lock.json
+  - vite.config.ts
+  - tsconfig.json
+  - .github/workflows/ci-cd.yml
+  - GITHUB_PAGES_SETUP.md
+  - Gemfile
+  - Gemfile.lock
+  - .DS_Store
+  - .vscode
+
+# Keep files
+keep_files:
+  - assets
+  - images
+  - static
+
+# SEO
+social:
+  name: Salim Saay
+  links:
+    - https://github.com/saaysalim
+
+# Google Analytics (optional)
+# google_analytics: UA-XXXXXXXXX-X
+
+# Github
+github: [metadata]
